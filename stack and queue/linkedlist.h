@@ -18,7 +18,6 @@ public:
     //CRUD
     void insertHead(element* val);
     void insertTail(element* val);
-    void insertTail(int val);
     void insertBehindElement(element* val1, element* val2);
     void deleteHead();
     void deleteTail();
@@ -26,7 +25,6 @@ public:
     void travel();
     void showAll();
     void removeAll();
-    void divided(int , linkedlist* , linkedlist*);
     ~linkedlist();
 
 private:

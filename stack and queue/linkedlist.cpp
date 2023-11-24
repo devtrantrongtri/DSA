@@ -128,7 +128,6 @@ void linkedlist::travel()
         std::cout<<p->getData()<<"\t";
         p = p->getPointer();
     }
-    cout<<"end travel of"<<this<<endl;
     
 }
 
@@ -152,28 +151,7 @@ void linkedlist::removeAll()
         delete p;
     }
 }
-void linkedlist::insertTail(int val)
-{
-    element* e = new element(val);
-    this->insertTail(e);
-}
 
-void linkedlist::divided(int x, linkedlist *listBig, linkedlist *listSmall)
-{
-    element* p = this->head;
-    while(p != nullptr)
-    {
-        if(p->getData() >= x)
-        {
-            listBig->insertTail(p->getData());
-            p = p->getPointer();
-        }else{
-            listSmall->insertTail(p->getData());
-            p = p->getPointer();
-        }
-    }
-    cout<<"end divied.\n";
-}
 linkedlist::~linkedlist()
 {
     element *current = this->head;
@@ -182,5 +160,4 @@ linkedlist::~linkedlist()
         delete current;
         current = next;
     }
-    delete this;
 }

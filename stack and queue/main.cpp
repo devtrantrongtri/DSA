@@ -6,9 +6,6 @@ using namespace std;
 int main(){
     cout<<"start:\n";
     linkedlist* list_ = new linkedlist();
-    linkedlist* listA = new linkedlist();
-    linkedlist* listB = new linkedlist();
-    int x = 5;
     element* e[13];
     for(int i =0 ; i < 10; i++)
     {
@@ -23,15 +20,13 @@ int main(){
     // list_->insertBehindElement(e[1],e[10]);
     // list_->travel();
     // list_->showAll();
-    // cout<<"remove all:"<<endl;
-    // list_->removeAll();
-    // list_->travel();
+    cout<<"remove all:"<<endl;
+    list_->removeAll();
+    list_->travel();
     // Delete each element
-    list_->divided(x,listA,listB);
-    listA->travel();
-    listB->travel();
+
     // Delete the linked list
-    // delete list_;
+    delete list_;
 
     cout<<"\nend.\n";
     return 0;
